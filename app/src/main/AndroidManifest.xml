@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.onlineslotsgo.hesh">
+
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+
+        <activity
+            android:name="com.onlineslotsgo.hesh.Feedback"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name="com.onlineslotsgo.hesh.WebStart"
+            android:screenOrientation="portrait"/>
+
+        <activity
+            android:name="com.onlineslotsgo.hesh.Select"
+            android:screenOrientation="portrait" />
+
+         <activity
+            android:name="com.onlineslotsgo.hesh.Game"
+            android:screenOrientation="landscape" />
+
+        <activity
+            android:name="com.onlineslotsgo.hesh.ScreenData"
+            android:screenOrientation="portrait">
+
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+                <data
+                    android:host="vcxfds.com"
+                    android:pathPrefix="/bcfsdr"
+                    android:scheme="fdstdz" />
+            </intent-filter>
+        </activity>
+
+
+        <meta-data android:name="com.facebook.sdk.ApplicationId" android:value="@string/facebook_app_id"/>
+
+    </application>
+</manifest>
